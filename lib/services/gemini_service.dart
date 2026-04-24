@@ -6,7 +6,7 @@ import 'package:google_generative_ai/google_generative_ai.dart';
 /// Get one for free at: https://aistudio.google.com/app/apikey
 
 class GeminiService {
-  static const String _apiKey = 'AIzaSyCXM0cvDAODVOzBOlV5g8kntjPr0M10sVE';
+  static const String _apiKey = 'AIzaSyA6evpTjkG6BXO1Y0ds7o7iW5jtjpPv4po';
 
   late final GenerativeModel _model;
 
@@ -16,6 +16,8 @@ class GeminiService {
       apiKey: _apiKey,
     );
   }
+
+  /// Sends a user message to Gemini and returns the AI response.
 
   /// [message] - The user's latest message
   /// [language] - The target language being learned (e.g., "Spanish")
