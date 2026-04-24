@@ -35,7 +35,7 @@ lib/
 │   └── firestore_service.dart     # Firestore CRUD operations
 ├── screens/
 │   ├── home_screen.dart           # Language selection
-│   └── chat_screen.dart           # Chat interface
+│   └── chat_screen.dart          # Chat interface
 └── widgets/
     ├── message_bubble.dart        # Individual chat bubble
     └── chat_input.dart            # Text input + send button
@@ -116,20 +116,33 @@ flutter pub get
 1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey)
 2. Sign in and click **Create API key**
 3. Copy the key
-4. Open `lib/services/gemini_service.dart`
-5. Replace `YOUR_GEMINI_API_KEY_HERE` with your actual key:
-   ```dart
-   static const String _apiKey = 'AIza...your-real-key...';
-   ```
+4. Open `lib/services/gemini_service.dart` — API key is already set up securely via `--dart-define` (no need to hardcode it)
 
 ### Step 4: Run the App
 
 ```bash
 flutter pub get
-flutter run
 ```
 
-Pick a device (Android emulator, iOS simulator, Chrome, etc.) and the app launches.
+**Run with your Gemini API key (replace the key with yours):**
+
+```bash
+flutter run --dart-define=GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
+```
+
+**Web (Chrome) এ run করতে চাইলে:**
+
+```bash
+flutter run -d chrome --dart-define=GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
+```
+
+**Production build করতে চাইলে:**
+
+```bash
+flutter build web --dart-define=GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
+```
+
+> ⚠️ API key কখনো সরাসরি code এ লিখবে না এবং GitHub এ push করবে না।
 
 ---
 
