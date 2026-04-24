@@ -6,7 +6,7 @@ import 'package:google_generative_ai/google_generative_ai.dart';
 /// Get one for free at: https://aistudio.google.com/app/apikey
 class GeminiService {
   // ⚠️ REPLACE THIS WITH YOUR ACTUAL GEMINI API KEY
-  static const String _apiKey = 'AIzaSyD3C3DVTUSPnj7fMvLFfPNECROXFiIUKFU';
+  static const String _apiKey = 'AIzaSyCXM0cvDAODVOzBOlV5g8kntjPr0M10sVE';
 
   late final GenerativeModel _model;
 
