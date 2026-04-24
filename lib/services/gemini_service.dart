@@ -1,5 +1,10 @@
 import 'package:google_generative_ai/google_generative_ai.dart';
 
+/// Service for interacting with the Gemini API.
+///
+/// IMPORTANT: Replace [_apiKey] with your actual Gemini API key.
+/// Get one for free at: https://aistudio.google.com/app/apikey
+
 class GeminiService {
   static const String _apiKey = 'AIzaSyCXM0cvDAODVOzBOlV5g8kntjPr0M10sVE';
 
