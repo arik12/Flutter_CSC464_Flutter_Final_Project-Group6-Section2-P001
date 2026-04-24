@@ -1,12 +1,8 @@
 import 'package:google_generative_ai/google_generative_ai.dart';
 
-/// Service for interacting with the Gemini API.
-///
-/// IMPORTANT: Replace [_apiKey] with your actual Gemini API key.
-/// Get one for free at: https://aistudio.google.com/app/apikey
-
 class GeminiService {
-  static const String _apiKey = 'AIzaSyDrr1l1l5htmwJLy7EBeMpUnyR41pAO32U';
+  static const String _apiKey =
+      String.fromEnvironment('AIzaSyDwf19cVEy1ZNr2XHiOVLJUg5dsO-rVN5c');
 
   late final GenerativeModel _model;
 
@@ -17,18 +13,12 @@ class GeminiService {
     );
   }
 
-  /// Sends a user message to Gemini and returns the AI response.
-
-  /// [message] - The user's latest message
-  /// [language] - The target language being learned (e.g., "Spanish")
-  /// [history] - Previous conversation messages for context
   Future<String> sendMessage({
     required String message,
     required String language,
     List<Content> history = const [],
   }) async {
     try {
-      // System prompt to set up the tutor persona
       final systemPrompt = '''
 You are a friendly and patient language tutor helping a student learn $language.
 Respond primarily in $language, but provide English translations and explanations 
@@ -36,7 +26,6 @@ for grammar, vocabulary, and cultural context when helpful. Keep responses conci
 and encouraging. Gently correct any mistakes the student makes.
 ''';
 
-      // Start chat with system prompt + history
       final chat = _model.startChat(
         history: [
           Content.text(systemPrompt),
@@ -50,7 +39,6 @@ and encouraging. Gently correct any mistakes the student makes.
         ],
       );
 
-      // Send the new user message
       final response = await chat.sendMessage(Content.text(message));
       return response.text ?? 'Sorry, I could not generate a response.';
     } catch (e) {
