@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "20103854007",
+    "firebase_url": "https://flutter-task-app-bd75e-default-rtdb.firebaseio.com",
+    "project_id": "flutter-task-app-bd75e",
+    "storage_bucket": "flutter-task-app-bd75e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:20103854007:android:d20ba82e31f0f136245a32",
+        "android_client_info": {
+          "package_name": "com.example.ai_language_learning_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGbsJd7KZg1o4Fgxczmi_eW5wutB12U1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:20103854007:android:2cf66223325cdb26245a32",
+        "android_client_info": {
+          "package_name": "com.example.flutter_ui_class"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGbsJd7KZg1o4Fgxczmi_eW5wutB12U1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
